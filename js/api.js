@@ -1,4 +1,6 @@
+import {updataUi} from "./ui.js"
 const url = "https://restcountries.com/v3.1/all"
+
 
 
 const doApi = async () =>{
@@ -6,7 +8,10 @@ const doApi = async () =>{
     let resp = await data.json()
     // saveToJSON(resp)
     console.log(resp)
+    updataUi(resp)
 }
+
+
 
 // const saveToJSON = (data) =>{
 //     let dataStr = JSON.stringify(data)
