@@ -1,4 +1,4 @@
-import {updataUi} from "./ui.js"
+import {updateUi} from "./ui.js"
 const url = "https://restcountries.com/v3.1/all"
 
 
@@ -8,7 +8,7 @@ const doApi = async () =>{
     let resp = await data.json()
     // saveToJSON(resp)
     console.log(resp)
-    updataUi(resp)
+    updateUi(resp)
 }
 
 

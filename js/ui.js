@@ -1,10 +1,11 @@
 const main = document.querySelector("main")
 
-const updataUi = (data) =>{
+const updateUi = (data) =>{
     setTimeout(() => {
+        
         main.innerHTML = data
     }, 2000)
 }
 
 
-export {updataUi} 
+export {updateUi} 
