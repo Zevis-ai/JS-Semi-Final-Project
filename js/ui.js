@@ -2,6 +2,7 @@ const main = document.querySelector("main")
 const loader = document.querySelector(".loader")
 
 const updateUi = (data) =>{
+    // showMap()
     setTimeout(() => {
         loader.style.display = "none"
         showAllCountries(data)
@@ -205,9 +206,19 @@ const showAllCountries = (data) =>{
             <p>Region: ${element.region}</p>
             <p>Population: ${element.population}</p>
             <img src="${element.flags.png}" alt="flag">
+
         `
     });
 }
 
+//<p>Population: ${element.latlng}</p>
+
+const showMap =()=>{
+    var map = L.map('map').setView([31.4117257 ,35.0818155], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+}
 
 export {updateUi} 
