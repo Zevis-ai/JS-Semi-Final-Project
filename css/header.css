@@ -163,5 +163,6 @@ ul li:hover .headIcon {
 }
 
 #map {
-    height: 180px;
+    height: 50px;
+    width: 50px;
 }

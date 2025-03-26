@@ -199,19 +199,19 @@ const updateUi = (data) =>{
 
 const showAllCountries = (data) =>{
     data.forEach(element => {
-        let state = new StateClass(element.name.common, element.capital[0], element.region, element.population, element.flags.png)
-        main.innerHTML += state.render()
+        let state = new StateClass(element.name.common, element.capital[0], element.region, element.population, element.flags.png, element.latlng)
+        state.render(main)
     });
 }
 
 //<p>Population: ${element.latlng}</p>
 
-const showMap =()=>{
-    var map = L.map('map').setView([31.4117257 ,35.0818155], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-}
+// const showMap =()=>{
+//     var map = L.map('map').setView([31.4117257 ,35.0818155], 13);
+//     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//         maxZoom: 19,
+//         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+//     }).addTo(map);
+// }
 
 export {updateUi} 
