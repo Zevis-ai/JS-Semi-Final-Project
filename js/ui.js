@@ -1,7 +1,17 @@
-const main = document.querySelector("main")
+const main = document.querySelector("main");
+const menuBtn = document.getElementById('menuBtn');
+const sidebar = document.getElementById('sidebar');
+const closeBtn = document.querySelector('.close-btn');
 
-const updataUi = (data) =>{
-    main.innerHTML = data
-}
+const updataUi = (data) => {
+    main.innerHTML = data;
+};
 
-export {updataUi} 
+const toggleSidebar = () => {
+    sidebar.classList.toggle('open');
+};
+
+menuBtn.addEventListener('click', toggleSidebar);
+closeBtn.addEventListener('click', toggleSidebar);
+
+export { updataUi };
