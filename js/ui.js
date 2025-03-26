@@ -11,7 +11,7 @@ const updateUi = (data) =>{
 
 const showAllCountries = (data) => {
     data.forEach(element => {
-        const capital = Array.isArray(element.capital) && element.capital.length > 0 ? element.capital[0] : 'לא קיימת';
+        const capital = Array.isArray(element.capital) && element.capital.length > 0 ? element.capital[0] : 'no capital';
         
         let state = new StateClass(
             element.name.common,
