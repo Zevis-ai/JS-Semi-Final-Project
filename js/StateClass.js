@@ -24,6 +24,24 @@ export class StateClass {
         container.appendChild(card);
 
         setTimeout(() => this.loadMap(), 0);
+
+
+    }
+
+    render2(container) {
+        const card = document.createElement('div');
+        card.className = 'state-card';
+        card.innerHTML = `
+            <img src="${this.flag}" alt="Flag of ${this.name}" class="flag">
+            <h3 style="font-size: 35px;">${this.name}</h3>
+        `;
+
+        card.addEventListener('click', () => {
+            container.innerHTML = ''
+            this.render(container);
+        });
+
+        container.appendChild(card);
     }
 
     loadMap() {

@@ -10,11 +10,13 @@ const updateUi = (newData) => {
     data = newData
     setTimeout(() => {
         loader.style.display = "none";
-        showAllCountries(data);
+        // showAllCountries(data);
+        showFiveCountries()
     }, 2000);
 };
 
 const showAllCountries = (data) => {
+    main.innerHTML = ""
     data.forEach(element => {
         const capital = Array.isArray(element.capital) && element.capital.length > 0 ? element.capital[0] : 'no capital';
         
@@ -63,7 +65,7 @@ const showFiveCountries =()=>{
             element.flags.png,
             element.latlng
         );
-        state.render(main);
+        state.render2(main);
     });
 }
 
@@ -71,8 +73,16 @@ document.querySelectorAll('ul li a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const countryName = e.target.getAttribute('data-country');
+        if (countryName === 'all') {
+            showAllCountries(data);
+            return;
+        }
         showOneCountry(data, countryName);
     });
 });
+
+document.querySelector('.logo').addEventListener('click', () => {
+    showFiveCountries()
+})
 
 export { updateUi };
