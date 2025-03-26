@@ -1,13 +1,18 @@
-import {StateClass} from "./stateClass.js"
-const main = document.querySelector("main")
-const loader = document.querySelector(".loader")
+import { StateClass } from "./stateClass.js";
 
-const updateUi = (data) =>{
+const main = document.querySelector("main");
+const loader = document.querySelector(".loader");
+
+let data;
+
+
+const updateUi = (newData) => {
+    data = newData
     setTimeout(() => {
-        loader.style.display = "none"
-        showAllCountries(data)
-    }, 2000)
-}
+        loader.style.display = "none";
+        showAllCountries(data);
+    }, 2000);
+};
 
 const showAllCountries = (data) => {
     data.forEach(element => {
@@ -27,8 +32,8 @@ const showAllCountries = (data) => {
 
 const showOneCountry = (data, common) => {
     data.forEach(element => {
-        if(element.name.common === common){
-            main.innerHTML = ""
+        if (element.name.common === common) {
+            main.innerHTML = "";
             const capital = Array.isArray(element.capital) && element.capital.length > 0 ? element.capital[0] : 'no capital';
             let state = new StateClass(
                 element.name.common,
@@ -40,7 +45,16 @@ const showOneCountry = (data, common) => {
             );
             state.render(main);
         }
-    })
-}
+    });
+};
 
-export {updateUi} 
+
+document.querySelectorAll('ul li a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const countryName = e.target.getAttribute('data-country');
+        showOneCountry(data, countryName);
+    });
+});
+
+export { updateUi };
