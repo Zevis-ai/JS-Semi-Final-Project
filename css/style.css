@@ -5,14 +5,22 @@ main {
     padding: 20px;
 }
 
+h3{
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .state-card {
+    color: white;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    background: white;
+    background: rgba(18, 0, 0, 0.397);
     padding: 16px;
     text-align: center;
     transition: transform 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.397);
 }
 
 .state-card:hover {
@@ -36,9 +44,9 @@ main {
 
 
 .loader {
-    width: 60px;
+    width: 100px;
     aspect-ratio: 2;
-    --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+    --_g: no-repeat radial-gradient(circle closest-side, #ffffff 90%, #0000);
     background:
         var(--_g) 0% 50%,
         var(--_g) 50% 50%,
@@ -80,6 +88,6 @@ main {
     left: 0;
     width: 100vw;
     height: 100vh;
-    object-fit: cover; /* מכסה את כל המסך */
-    z-index: -1; /* מתחת לתוכן */
+    object-fit: cover;
+    z-index: -1;
 }

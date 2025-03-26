@@ -14,7 +14,7 @@ export class StateClass {
         card.className = 'state-card';
         card.innerHTML = `
             <img src="${this.flag}" alt="Flag of ${this.name}" class="flag">
-            <h3>${this.name}</h3>
+            <h3 style="font-size: 35px;">${this.name}</h3>
             <p><strong>Capital:</strong> ${this.capital}</p>
             <p><strong>Region:</strong> ${this.region}</p>
             <p><strong>Population:</strong> ${this.population.toLocaleString()}</p>

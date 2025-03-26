@@ -25,4 +25,22 @@ const showAllCountries = (data) => {
     });
 };
 
+const showOneCountry = (data, common) => {
+    data.forEach(element => {
+        if(element.name.common === common){
+            main.innerHTML = ""
+            const capital = Array.isArray(element.capital) && element.capital.length > 0 ? element.capital[0] : 'no capital';
+            let state = new StateClass(
+                element.name.common,
+                capital,
+                element.region,
+                element.population,
+                element.flags.png,
+                element.latlng
+            );
+            state.render(main);
+        }
+    })
+}
+
 export {updateUi} 
