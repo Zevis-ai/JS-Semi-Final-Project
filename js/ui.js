@@ -1,3 +1,4 @@
+import {StateClass} from "./stateClass.js"
 const main = document.querySelector("main")
 const loader = document.querySelector(".loader")
 
@@ -198,16 +199,8 @@ const updateUi = (data) =>{
 
 const showAllCountries = (data) =>{
     data.forEach(element => {
-        main.innerHTML += 
-        `
-        <div class="card">
-            <h2>${element.name.common}</h2>
-            <p>Capital: ${element.capital[0]}</p>
-            <p>Region: ${element.region}</p>
-            <p>Population: ${element.population}</p>
-            <img src="${element.flags.png}" alt="flag">
-
-        `
+        let state = new StateClass(element.name.common, element.capital[0], element.region, element.population, element.flags.png)
+        main.innerHTML += state.render()
     });
 }
 
