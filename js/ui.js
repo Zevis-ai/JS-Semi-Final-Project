@@ -1,8 +1,8 @@
 import { StateClass } from "./stateClass.js";
 
-const main = document.querySelector("main");
-const loader = document.querySelector(".loader");
-
+const main = document.querySelector("main")
+const loader = document.querySelector(".loader")
+const searchInput = document.getElementById("searchInput")
 let data;
 
 
@@ -88,6 +88,12 @@ document.querySelector('.logo').addEventListener('click', () => {
     showFiveCountries()
 })
 
-export { updateUi };
+searchInput.addEventListener('input', (e) => {
+    const searchValue = e.target.value;
+    const filteredData = data.filter(item => {
+        return item.name.common.toLowerCase().includes(searchValue.toLowerCase());
+    });
+    showAllCountries(filteredData);
+});
 
-//    console.log(resp[246].borders);
+export { updateUi };
