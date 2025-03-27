@@ -1,5 +1,7 @@
+import { findCountryByCIOC } from './ui.js';
+
 export class StateClass {
-    constructor(_name, _capital, _region, _population, _flag, _latlng, _borders) {
+    constructor(_name, _capital, _region, _population, _flag, _latlng, _borders, _cioc) {
         this.name = _name;
         this.capital = _capital;
         this.region = _region;
@@ -8,6 +10,7 @@ export class StateClass {
         this.latlng = _latlng;
         this.mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
         this.borders = _borders;
+        this.cioc = _cioc;
     }
 
     render(container) {
@@ -15,7 +18,7 @@ export class StateClass {
     
         if (this.borders && this.borders.length > 0) {
             this.borders.forEach(border => {
-                bordersContent += `<button class="btn btn-primary btn-sm rounded-pill m-1">${border}</button>`
+                bordersContent += `<button class="btn btn-primary btn-sm rounded-pill m-1" data-border="${border}">${border}</button>`
             })
         } else {
             bordersContent = "No bordering countries";
@@ -40,6 +43,14 @@ export class StateClass {
             </div>
             <div id="${this.mapId}" class="map-container mt-3"></div>
         `;
+
+        const borderButtons = card.querySelectorAll(".btn");
+        borderButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const border = button.dataset.border;
+                findCountryByCIOC(border);
+            });
+        });
     
         container.appendChild(card)
         setTimeout(() => this.loadMap(), 0)
