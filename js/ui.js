@@ -1,4 +1,4 @@
-import { StateClass } from "./stateClass.js";
+import { StateClass } from "./StateClass.js";
 
 const main = document.querySelector("main")
 const loader = document.querySelector(".loader")
