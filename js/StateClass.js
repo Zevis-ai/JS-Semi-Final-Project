@@ -1,5 +1,5 @@
 export class StateClass {
-    constructor(_name, _capital, _region, _population, _flag, _latlng) {
+    constructor(_name, _capital, _region, _population, _flag, _latlng, _borders) {
         this.name = _name;
         this.capital = _capital;
         this.region = _region;
@@ -7,9 +7,13 @@ export class StateClass {
         this.flag = _flag;
         this.latlng = _latlng;
         this.mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
+        this.borders = _borders;
     }
 
     render(container) {
+        if(!this.borders){
+            this.borders = "No bordering countries"
+        }
         const card = document.createElement('div');
         card.className = 'state-card';
         card.innerHTML = `
@@ -19,6 +23,8 @@ export class StateClass {
             <p><strong>Region:</strong> ${this.region}</p>
             <p><strong>Population:</strong> ${this.population.toLocaleString()}</p>
             <div id="${this.mapId}" class="map-container"></div>
+            <h4>Bordering countries:</h4>
+            <H2>${this.borders}</H2>
         `;
 
         container.appendChild(card);

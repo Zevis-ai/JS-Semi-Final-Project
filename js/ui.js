@@ -26,7 +26,8 @@ const showAllCountries = (data) => {
             element.region,
             element.population,
             element.flags.png,
-            element.latlng
+            element.latlng,
+            element.borders
         );
         state.render(main);
     });
@@ -43,7 +44,8 @@ const showOneCountry = (data, common) => {
                 element.region,
                 element.population,
                 element.flags.png,
-                element.latlng
+                element.latlng,
+                element.borders
             );
             state.render(main);
         }
@@ -63,7 +65,8 @@ const showFiveCountries =()=>{
             element.region,
             element.population,
             element.flags.png,
-            element.latlng
+            element.latlng,
+            element.borders
         );
         state.render2(main);
     });
@@ -86,3 +89,5 @@ document.querySelector('.logo').addEventListener('click', () => {
 })
 
 export { updateUi };
+
+//    console.log(resp[246].borders);

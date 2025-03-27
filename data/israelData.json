@@ -1,0 +1,213 @@
+{
+    "name": {
+      "common": "Israel",
+      "official": "State of Israel",
+      "nativeName": {
+        "ara": {
+          "official": "دولة إسرائيل",
+          "common": "إسرائيل"
+        },
+        "heb": {
+          "official": "מדינת ישראל",
+          "common": "ישראל"
+        }
+      }
+    },
+    "tld": [
+      ".il"
+    ],
+    "cca2": "IL",
+    "ccn3": "376",
+    "cca3": "ISR",
+    "cioc": "ISR",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "ILS": {
+        "name": "Israeli new shekel",
+        "symbol": "₪"
+      }
+    },
+    "idd": {
+      "root": "+9",
+      "suffixes": [
+        "72"
+      ]
+    },
+    "capital": [
+      "Jerusalem"
+    ],
+    "altSpellings": [
+      "IL",
+      "State of Israel",
+      "Medīnat Yisrā'el"
+    ],
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "languages": {
+      "ara": "Arabic",
+      "heb": "Hebrew"
+    },
+    "translations": {
+      "ara": {
+        "official": "دولة إسرائيل",
+        "common": "إسرائيل"
+      },
+      "bre": {
+        "official": "Stad Israel",
+        "common": "Israel"
+      },
+      "ces": {
+        "official": "Stát Izrael",
+        "common": "Izrael"
+      },
+      "cym": {
+        "official": "State of Israel",
+        "common": "Israel"
+      },
+      "deu": {
+        "official": "Staat Israel",
+        "common": "Israel"
+      },
+      "est": {
+        "official": "Iisraeli Riik",
+        "common": "Iisrael"
+      },
+      "fin": {
+        "official": "Israelin valtio",
+        "common": "Israel"
+      },
+      "fra": {
+        "official": "État d'Israël",
+        "common": "Israël"
+      },
+      "hrv": {
+        "official": "Država Izrael",
+        "common": "Izrael"
+      },
+      "hun": {
+        "official": "Izrael",
+        "common": "Izrael"
+      },
+      "ita": {
+        "official": "Stato di Israele",
+        "common": "Israele"
+      },
+      "jpn": {
+        "official": "イスラエル国",
+        "common": "イスラエル"
+      },
+      "kor": {
+        "official": "이스라엘국",
+        "common": "이스라엘"
+      },
+      "nld": {
+        "official": "Staat Israël",
+        "common": "Israël"
+      },
+      "per": {
+        "official": "فلسطين اشغالی",
+        "common": "فلسطين اشغالی"
+      },
+      "pol": {
+        "official": "Państwo Izrael",
+        "common": "Izrael"
+      },
+      "por": {
+        "official": "Estado de Israel",
+        "common": "Israel"
+      },
+      "rus": {
+        "official": "Государство Израиль",
+        "common": "Израиль"
+      },
+      "slk": {
+        "official": "Izraelský štát",
+        "common": "Izrael"
+      },
+      "spa": {
+        "official": "Estado de Israel",
+        "common": "Israel"
+      },
+      "srp": {
+        "official": "Држава Израел",
+        "common": "Израел"
+      },
+      "swe": {
+        "official": "Staten Israel",
+        "common": "Israel"
+      },
+      "tur": {
+        "official": "İsrail Devleti",
+        "common": "İsrail"
+      },
+      "urd": {
+        "official": "ریاستِ اسرائیل",
+        "common": "اسرائیل"
+      },
+      "zho": {
+        "official": "以色列国",
+        "common": "以色列"
+      }
+    },
+    "latlng": [31.47, 35.13],
+    "landlocked": false,
+    "borders": [
+      "EGY",
+      "JOR",
+      "LBN",
+      "PSE",
+      "SYR"
+    ],
+    "area": 20770,
+    "demonyms": {
+      "eng": {
+        "f": "Israeli",
+        "m": "Israeli"
+      },
+      "fra": {
+        "f": "Israélienne",
+        "m": "Israélien"
+      }
+    },
+    "flag": "🇮🇱",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/6UY1AH8XeafVwdC97",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/1473946"
+    },
+    "population": 9216900,
+    "gini": {
+      "2016": 39
+    },
+    "fifa": "ISR",
+    "car": {
+      "signs": [
+        "IL"
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC+02:00"
+    ],
+    "continents": [
+      "Asia"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/il.png",
+      "svg": "https://flagcdn.com/il.svg",
+      "alt": "The flag of Israel has a white field with a blue hexagram — the Magen David — centered between two equal horizontal blue bands situated near the top and bottom edges of the field."
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/il.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/il.svg"
+    },
+    "startOfWeek": "sunday",
+    "capitalInfo": {
+      "latlng": [31.77, 35.23]
+    },
+    "postalCode": {
+      "format": "#####",
+      "regex": "^(\\d{5})$"
+    }
+  }
