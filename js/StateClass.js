@@ -11,28 +11,64 @@ export class StateClass {
     }
 
     render(container) {
-        if(!this.borders){
-            this.borders = "No bordering countries"
+        let bordersContent = ""
+    
+        if (this.borders && this.borders.length > 0) {
+            this.borders.forEach(border => {
+                bordersContent += `<button class="btn btn-primary btn-sm rounded-pill m-1">${border}</button>`
+            })
+        } else {
+            bordersContent = "No bordering countries";
         }
+    
         const card = document.createElement('div');
-        card.className = 'state-card';
+        card.className = 'state-card card shadow p-3 mb-5  rounded';
+    
         card.innerHTML = `
-            <img src="${this.flag}" alt="Flag of ${this.name}" class="flag">
-            <h3 style="font-size: 35px;">${this.name}</h3>
-            <p><strong>Capital:</strong> ${this.capital}</p>
-            <p><strong>Region:</strong> ${this.region}</p>
-            <p><strong>Population:</strong> ${this.population.toLocaleString()}</p>
-            <div id="${this.mapId}" class="map-container"></div>
-            <h4>Bordering countries:</h4>
-            <H2>${this.borders}</H2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="${this.flag}" alt="Flag of ${this.name}" class="flag img-fluid rounded">
+                </div>
+                <div class="col-md-8">
+                    <h3 class="mb-3">${this.name}</h3>
+                    <p><strong>Capital:</strong> ${this.capital}</p>
+                    <p><strong>Region:</strong> ${this.region}</p>
+                    <p><strong>Population:</strong> ${this.population.toLocaleString()}</p>
+                    <h4 class="mt-3">Bordering countries:</h4>
+                    <div class="borders-container">${bordersContent}</div>
+                </div>
+            </div>
+            <div id="${this.mapId}" class="map-container mt-3"></div>
         `;
-
-        container.appendChild(card);
-
-        setTimeout(() => this.loadMap(), 0);
-
-
+    
+        container.appendChild(card)
+        setTimeout(() => this.loadMap(), 0)
     }
+
+    // old render
+    // render(container) {
+    //     if(!this.borders){
+    //         this.borders = "No bordering countries"
+    //     }
+    //     const card = document.createElement('div');
+    //     card.className = 'state-card';
+    //     card.innerHTML = `
+    //         <img src="${this.flag}" alt="Flag of ${this.name}" class="flag">
+    //         <h3 style="font-size: 35px;">${this.name}</h3>
+    //         <p><strong>Capital:</strong> ${this.capital}</p>
+    //         <p><strong>Region:</strong> ${this.region}</p>
+    //         <p><strong>Population:</strong> ${this.population.toLocaleString()}</p>
+    //         <div id="${this.mapId}" class="map-container"></div>
+    //         <h4>Bordering countries:</h4>
+    //         <H2>${this.borders}</H2>
+    //     `;
+
+    //     container.appendChild(card);
+
+    //     setTimeout(() => this.loadMap(), 0);
+
+
+    // }
 
     render2(container) {
         const card = document.createElement('div');
