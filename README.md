@@ -57,7 +57,7 @@ This project focuses on displaying information about various countries worldwide
 
 ## Installation Instructions:
 1. Clone the repository from GitHub:
-      git clone https://github.com/username/atlas-countries.git
+      git clone https://github.com/Zevis-ai/JS-Semi-Final-Project.git
    
 2. Install dependencies:
       npm install
