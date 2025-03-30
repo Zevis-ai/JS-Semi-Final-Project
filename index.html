@@ -29,13 +29,32 @@
 </head>
 <body class="bg-light">
 
-    <header>
-        <div class="brand">
-            <span class="fab fa-github logo"></span>
-            <h1>Zevi Friedman</h1>
+    <header class="d-flex justify-content-between align-items-center px-4 py-2 position-relative">
+        <div class="brand d-flex align-items-center">
+            <span class="fab fa-github logo fs-3 me-2"></span>
+            <h1 class="h4 m-0">Zevi Friedman</h1>
         </div>
-        <span id="icon_borger" class="fa fa-bars"></span>
+    
+        
+        <div class="position-absolute start-50 translate-middle-x d-none d-lg-flex gap-3">
+            <button id="home" style="color: white; background: rgba(112, 128, 144, 0.349); width: 100px;" class="btn custom-btn px-4">Home</button>
+            <button style="color: white; background: rgba(112, 128, 144, 0.349);" class="btn custom-btn px-4 showCountryL" value="Israel">Israel</button>
+            <button style="color: white; background: rgba(112, 128, 144, 0.349);" class="btn custom-btn px-4 showCountryL">France</button>
+            <button style="color: white; background: rgba(112, 128, 144, 0.349);" class="btn custom-btn px-4 showCountryL">United Kingdom</button>
+            <button style="color: white; background: rgba(112, 128, 144, 0.349);" class="btn custom-btn px-4 showCountryL">Thailand</button>
+            <button style="color: white; background: rgba(112, 128, 144, 0.349);" class="btn custom-btn px-4 showCountryL">United States</button>
+        </div>
+    
+        
+        <div class="searchBox d-none d-lg-flex align-items-center border rounded-3 px-2 py-1" style="width: 160px; height: 35px; background:  rgba(112, 128, 144, 0.349); margin-top: 0;">
+            <input type="text" id="searchInput" class="form-control border-0 fw-bold text-white text-center" style="background: none;">
+            <span class="fas fa-search ms-2 text-white"></span>
+        </div>
+    
+        <span id="icon_borger" class="fa fa-bars fs-3 d-md-none"></span>
     </header>
+    
+    
     <div class="sidebar" id="sidebar">
         <span class="close-btn" id="closeBtn">&times;</span>
         <div class="searchBox">

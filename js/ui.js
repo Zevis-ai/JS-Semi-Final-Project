@@ -92,9 +92,16 @@ document.querySelectorAll('ul li a').forEach(link => {
     });
 });
 
-document.querySelector('.logo').addEventListener('click', () => {
-    showFiveCountries()
-})
+document.querySelectorAll('.logo, #home').forEach(el => {
+    el.addEventListener('click', showFiveCountries);
+});
+
+document.querySelectorAll('.showCountryL').forEach(button => {
+    button.addEventListener('click', (e) => {
+        showOneCountry(data, e.target.innerText)
+    });
+});
+
 
 searchInput.addEventListener('input', (e) => {
     const searchValue = e.target.value;
