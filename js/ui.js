@@ -98,8 +98,22 @@ searchInput.addEventListener('input', (e) => {
     const filteredData = data.filter(item => {
         return item.name.common.toLowerCase().includes(searchValue.toLowerCase());
     });
-    showAllCountries(filteredData);
+    if (filteredData.length === 0) {
+        showNoResultsMessage();
+    } else {
+        showAllCountries(filteredData);
+    }
 });
+
+const showNoResultsMessage = () => {
+    main.innerHTML = `
+        <div class="alert alert-warning text-center mt-3" role="alert" style="font-size: 18px; font-weight: bold;">
+            🚫 No results found. Try searching for something else!
+        </div>
+    `;
+};
+
+
 
 const findCountryByCIOC =(_cioc)=>{
     let country = data.find(item => item.cca3 === _cioc)
