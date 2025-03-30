@@ -30,7 +30,7 @@ const showAllCountries = (data) => {
             element.flags.png,
             element.latlng,
             element.borders,
-            element.cioc
+            element.cca3
         );
         state.render(main);
     });
@@ -49,7 +49,7 @@ const showOneCountry = (data, common) => {
                 element.flags.png,
                 element.latlng,
                 element.borders,
-                element.cioc
+                element.cca3
             );
             state.render(main);
         }
@@ -71,7 +71,7 @@ const showFiveCountries =()=>{
             element.flags.png,
             element.latlng,
             element.borders,
-            element.cioc
+            element.cca3
         );
         state.render2(main);
     });
@@ -102,7 +102,7 @@ searchInput.addEventListener('input', (e) => {
 });
 
 const findCountryByCIOC =(_cioc)=>{
-    let country = data.find(item => item.cioc === _cioc)
+    let country = data.find(item => item.cca3 === _cioc)
     showOneCountry(data, country.name.common)
 }
 
