@@ -3,6 +3,8 @@ import { StateClass } from "./StateClass.js";
 const main = document.querySelector("main")
 const loader = document.querySelector(".loader")
 const searchInput = document.getElementById("searchInput")
+const burger = document.getElementById("icon_borger")
+// const side_burger = document.querySelector(".side_burger")
 let data;
 
 
@@ -103,5 +105,19 @@ const findCountryByCIOC =(_cioc)=>{
     let country = data.find(item => item.cioc === _cioc)
     showOneCountry(data, country.name.common)
 }
+
+document.getElementById("icon_borger").addEventListener("click", function() {
+    document.getElementById("sidebar").classList.add("active");
+});
+document.getElementById("closeBtn").addEventListener("click", function() {
+    document.getElementById("sidebar").classList.remove("active");
+});
+window.addEventListener("click", function(event) {
+    let sidebar = document.getElementById("sidebar");
+    if (!sidebar.contains(event.target) && !document.getElementById("icon_borger").contains(event.target)) {
+        sidebar.classList.remove("active");
+    }
+});
+
 
 export { updateUi, findCountryByCIOC };

@@ -29,42 +29,37 @@
     <header>
         <div class="brand">
             <span class="fab fa-github logo"></span>
-            <h1>zevi friedman</h1>
+            <h1>Zevi Friedman</h1>
         </div>
-        
-        <div class="navbar">
-            <div class="searchBox">
-                <input type="text" id="searchInput" placeholder="Search">
-                <span class="fas fa-search" id="searchIcon"></span>
-            </div>
-            <ul>
-                <li>
-                    <span class="flag-icon flag-icon-il headIcon"></span>
-                    <a href="#" data-country="Israel">ISRAEL</a>
-                </li>
-                <li>
-                    <span class="flag-icon flag-icon-us headIcon"></span>
-                    <a href="#" data-country="United States">USA</a>
-                </li>
-                <li>
-                    <span class="flag-icon flag-icon-fr headIcon"></span>
-                    <a href="#" data-country="France">France</a>
-                </li>
-                <li>
-                    <span class="flag-icon flag-icon-gb headIcon"></span>
-                    <a href="#" data-country="United Kingdom">United Kingdom</a>
-                </li>
-                <li>
-                    <span class="flag-icon flag-icon-th headIcon"></span>
-                    <a href="#" data-country="Thailand">Thailand</a>
-                </li>
-                <li>
-                    <span class="fa fa-globe headIcon"></span>
-                    <a href="#" data-country="all">Show All Countries</a>
-                </li>
-            </ul>
-        </div>
+        <span id="icon_borger" class="fa fa-bars"></span>
     </header>
+    <div class="sidebar" id="sidebar">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <div class="searchBox">
+            <input type="text" id="searchInput" placeholder="Search">
+            <span class="fas fa-search" id="searchIcon"></span>
+        </div>
+        <ul>
+            <li><span class="flag-icon flag-icon-il headIcon"></span>
+                <a href="#" onclick="selectCountry(this)" data-country="Israel">ישראל</a>
+            </li>
+            <li><span class="flag-icon flag-icon-us headIcon"></span>
+                <a href="#" onclick="selectCountry(this)" data-country="United States">ארה"ב</a>
+            </li>
+            <li><span class="flag-icon flag-icon-fr headIcon"></span>
+                <a href="#" onclick="selectCountry(this)" data-country="France">צרפת</a>
+            </li>
+            <li><span class="flag-icon flag-icon-gb headIcon"></span>
+                <a href="#" onclick="selectCountry(this)" data-country="United Kingdom">בריטניה</a>
+            </li>
+            <li><span class="flag-icon flag-icon-th headIcon"></span>
+                <a href="#" onclick="selectCountry(this)" data-country="Thailand">תאילנד</a>
+            </li>
+            <li><span class="fa fa-globe headIcon"></span>
+                <a href="#" onclick="selectCountry(this)" data-country="all">הצג כל המדינות</a>
+            </li>
+        </ul>
+    </div>
     
     <div class="loader"></div>
     
