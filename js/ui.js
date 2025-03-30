@@ -30,7 +30,8 @@ const showAllCountries = (data) => {
             element.flags.png,
             element.latlng,
             element.borders,
-            element.cca3
+            element.cca3,
+            Object.values(element.languages).join(" ")
         );
         state.render(main);
     });
@@ -49,7 +50,8 @@ const showOneCountry = (data, common) => {
                 element.flags.png,
                 element.latlng,
                 element.borders,
-                element.cca3
+                element.cca3,
+                Object.values(element.languages).join(" ")
             );
             state.render(main);
         }
@@ -71,7 +73,8 @@ const showFiveCountries =()=>{
             element.flags.png,
             element.latlng,
             element.borders,
-            element.cca3
+            element.cca3,
+            Object.values(element.languages).join(" , ")
         );
         state.render2(main);
     });

@@ -1,7 +1,7 @@
 import { findCountryByCIOC } from './ui.js';
 
 export class StateClass {
-    constructor(_name, _capital, _region, _population, _flag, _latlng, _borders, _cioc) {
+    constructor(_name, _capital, _region, _population, _flag, _latlng, _borders, _cioc, _language) {
         this.name = _name;
         this.capital = _capital;
         this.region = _region;
@@ -11,6 +11,7 @@ export class StateClass {
         this.mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
         this.borders = _borders;
         this.cioc = _cioc;
+        this.language = _language
     }
 
     render(container) {
@@ -37,6 +38,7 @@ export class StateClass {
                     <p><strong>Capital:</strong> ${this.capital}</p>
                     <p><strong>Region:</strong> ${this.region}</p>
                     <p><strong>Population:</strong> ${this.population.toLocaleString()}</p>
+                    <p><strong>Language:</strong> ${this.language}</p>
                     <h4 class="mt-3">Bordering countries:</h4>
                     <div class="borders-container">${bordersContent}</div>
                 </div>

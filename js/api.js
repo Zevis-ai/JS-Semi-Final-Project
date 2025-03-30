@@ -4,10 +4,11 @@ const url = "https://restcountries.com/v3.1/all"
 
 
 const doApi = async () =>{
-    let data = await fetch(url)
-    let resp = await data.json()
-    console.log(resp)
-    updateUi(resp)
+    let resp = await fetch(url)
+    let data = await resp.json()
+    console.log(data)
+
+    updateUi(data)
 }
 
 export {doApi}
