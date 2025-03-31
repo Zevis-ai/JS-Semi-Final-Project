@@ -9,7 +9,7 @@ export class StateClass {
         this.population = _population;
         this.flag = _flag;
         this.latlng = _latlng;
-        this.mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
+        this.mapId = `map-${Math.random().toString(36).slice(2, 9)}`;
         this.borders = _borders;
         this.cioc = _cioc;
         this.language = _language
