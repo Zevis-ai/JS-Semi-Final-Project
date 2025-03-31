@@ -1,4 +1,5 @@
 import { findCountryByCIOC } from './ui.js';
+import { getCountryNameByCIOC } from './ui.js';
 
 export class StateClass {
     constructor(_name, _capital, _region, _population, _flag, _latlng, _borders, _cioc, _language) {
@@ -19,7 +20,8 @@ export class StateClass {
     
         if (this.borders && this.borders.length > 0) {
             this.borders.forEach(border => {
-                bordersContent += `<button class="btn btn-primary btn-sm rounded-pill m-1" data-border="${border}">${border}</button>`
+                let countryName = getCountryNameByCIOC(border);
+                bordersContent += `<button class="btn btn-primary btn-sm rounded-pill m-1" data-border="${border}">${countryName}</button>`
             })
         } else {
             bordersContent = "No bordering countries";

@@ -126,6 +126,11 @@ const findCountryByCIOC =(_cioc)=>{
     showOneCountry(data, country.name.common)
 }
 
+export const getCountryNameByCIOC =(_cioc)=>{
+    let country = data.find(item => item.cca3 === _cioc)
+    return country.name.common
+}
+
 document.getElementById("icon_borger").addEventListener("click", ()=> {
     document.getElementById("sidebar").classList.add("active");
 });
