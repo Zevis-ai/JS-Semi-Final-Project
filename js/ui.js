@@ -99,8 +99,6 @@ document.querySelectorAll('.showCountryL').forEach(button => {
     });
 });
 
-
-
 document.querySelectorAll('#searchInput1, #searchInput2').forEach(input => {
     input.addEventListener('input', (e) => {
         const searchValue = e.target.value;
@@ -123,20 +121,20 @@ const showNoResultsMessage = () => {
     `;
 };
 
-
-
 const findCountryByCIOC =(_cioc)=>{
     let country = data.find(item => item.cca3 === _cioc)
     showOneCountry(data, country.name.common)
 }
 
-document.getElementById("icon_borger").addEventListener("click", function() {
+document.getElementById("icon_borger").addEventListener("click", ()=> {
     document.getElementById("sidebar").classList.add("active");
 });
-document.getElementById("closeBtn").addEventListener("click", function() {
+
+document.getElementById("closeBtn").addEventListener("click", ()=> {
     document.getElementById("sidebar").classList.remove("active");
 });
-window.addEventListener("click", function(event) {
+
+window.addEventListener("click", (event)=> {
     let sidebar = document.getElementById("sidebar");
     if (!sidebar.contains(event.target) && !document.getElementById("icon_borger").contains(event.target)) {
         sidebar.classList.remove("active");
