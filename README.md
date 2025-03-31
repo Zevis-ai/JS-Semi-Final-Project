@@ -1,6 +1,8 @@
 # Encyclopedia/Atlas Countries Project
 ![ my-glob](assets/img/my_glob-removebg-preview.png)
 ## Description
+visit [here](https://zevis-ai.github.io/JS-Semi-Final-Project/)
+
 This project focuses on displaying information about various countries worldwide using the restcountries API and free map services like Google Maps or Leaflet. The user can search for a country by name, retrieve information about it, and view its map using geographical coordinates. Additionally, neighboring countries are displayed with their respective codes.
 
 ### Requirements:
