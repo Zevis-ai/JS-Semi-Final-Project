@@ -75,9 +75,4 @@ export const getCountryNameByCIOC =(_cioc)=>{
     return country.name.common
 }
 
-
-
-
-
-
 export { updateUi, findCountryByCIOC };

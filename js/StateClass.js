@@ -48,7 +48,6 @@ export class StateClass {
             <div id="${this.mapId}" class="map-container mt-3"></div>
         `
 
-
         const borderButtons = card.querySelectorAll(".btn");
         borderButtons.forEach(button => {
             button.addEventListener("click", () => {
@@ -78,12 +77,8 @@ export class StateClass {
     //         <h4>Bordering countries:</h4>
     //         <H2>${this.borders}</H2>
     //     `;
-
     //     container.appendChild(card);
-
     //     setTimeout(() => this.loadMap(), 0);
-
-
     // }
 
     render2(container) {
@@ -93,7 +88,6 @@ export class StateClass {
             <img src="${this.flag}" alt="Flag of ${this.name}" class="flag">
             <h3 style="font-size: 35px;">${this.name}</h3>
         `;
-    
     
         card.addEventListener('click', () => {
             container.innerHTML = '';
@@ -109,7 +103,7 @@ export class StateClass {
             return;
         }
 
-        // יצירת מפה
+        // create map
         const map = L.map(this.mapId).setView(this.latlng, 5);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
