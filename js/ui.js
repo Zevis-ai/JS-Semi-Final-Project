@@ -2,9 +2,6 @@ import { StateClass } from "./StateClass.js";
 
 const main = document.querySelector("main")
 const loader = document.querySelector(".loader")
-const searchInput = document.getElementById("searchInput")
-const burger = document.getElementById("icon_borger")
-// const side_burger = document.querySelector(".side_burger")
 let data;
 
 
@@ -103,16 +100,19 @@ document.querySelectorAll('.showCountryL').forEach(button => {
 });
 
 
-searchInput.addEventListener('input', (e) => {
-    const searchValue = e.target.value;
-    const filteredData = data.filter(item => {
-        return item.name.common.toLowerCase().includes(searchValue.toLowerCase());
+
+document.querySelectorAll('#searchInput1, #searchInput2').forEach(input => {
+    input.addEventListener('input', (e) => {
+        const searchValue = e.target.value;
+        const filteredData = data.filter(item => {
+            return item.name.common.toLowerCase().includes(searchValue.toLowerCase());
+        });
+        if (filteredData.length === 0) {
+            showNoResultsMessage();
+        } else {
+            showAllCountries(filteredData);
+        }
     });
-    if (filteredData.length === 0) {
-        showNoResultsMessage();
-    } else {
-        showAllCountries(filteredData);
-    }
 });
 
 const showNoResultsMessage = () => {
