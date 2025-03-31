@@ -44,7 +44,8 @@ export class StateClass {
                 </div>
             </div>
             <div id="${this.mapId}" class="map-container mt-3"></div>
-        `;
+        `
+
 
         const borderButtons = card.querySelectorAll(".btn");
         borderButtons.forEach(button => {
@@ -90,12 +91,13 @@ export class StateClass {
             <img src="${this.flag}" alt="Flag of ${this.name}" class="flag">
             <h3 style="font-size: 35px;">${this.name}</h3>
         `;
-
+    
+    
         card.addEventListener('click', () => {
-            container.innerHTML = ''
+            container.innerHTML = '';
             this.render(container);
         });
-
+    
         container.appendChild(card);
     }
 
