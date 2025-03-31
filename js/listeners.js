@@ -46,6 +46,11 @@ export const declarEvent =(_data)=>{
     document.querySelectorAll('.logo, #home').forEach(el => {
         el.addEventListener('click', showFiveCountries);
     });
+
+    // goToGitHub
+    document.querySelector(".goToGitHub").addEventListener("click", ()=> {
+        window.location.href = "https://github.com/Zevis-ai/JS-Semi-Final-Project";
+    });
     
     // show one country
     document.querySelectorAll('.showCountryL').forEach(button => {
