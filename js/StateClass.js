@@ -106,7 +106,6 @@ export class StateClass {
     loadMap() {
         const mapElement = document.getElementById(this.mapId);
         if (!mapElement) {
-            console.error(`לא נמצא אלמנט עם id: ${this.mapId}`);
             return;
         }
 

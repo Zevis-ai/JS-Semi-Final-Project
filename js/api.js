@@ -1,5 +1,7 @@
 import {updateUi} from "./ui.js"
+import {declarEvent} from "./listeners.js"
 const url = "https://restcountries.com/v3.1/all"
+
 
 
 
@@ -9,6 +11,7 @@ const doApi = async () =>{
     console.log(data)
 
     updateUi(data)
+    declarEvent(data)
 }
 
 export {doApi}
