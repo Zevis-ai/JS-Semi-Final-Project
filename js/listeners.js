@@ -1,7 +1,7 @@
 import { showAllCountries } from "./ui.js";
 import { showNoResultsMessage } from "./ui.js";
 import { showOneCountry } from "./ui.js";
-import { showFiveCountries } from "./ui.js";
+import { showSixCountries } from "./ui.js";
 
 export const declarEvent =(_data)=>{
 
@@ -39,13 +39,16 @@ export const declarEvent =(_data)=>{
                 showAllCountries(_data);
                 return;
             }
+            if(countryName === 'Home'){
+                showSixCountries()
+            }
             showOneCountry(_data, countryName);
         });
     });
 
-    // show 5 countries
+    // show 6 countries
     document.querySelectorAll('.logo, #home').forEach(el => {
-        el.addEventListener('click', showFiveCountries);
+        el.addEventListener('click', showSixCountries);
     });
 
     // goToGitHub

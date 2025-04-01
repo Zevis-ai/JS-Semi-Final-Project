@@ -9,7 +9,7 @@ const updateUi = (newData) => {
     data = newData
     setTimeout(() => {
         loader.style.display = "none";
-        showFiveCountries()
+        showSixCountries()
     }, 2000);
 };
 
@@ -46,9 +46,9 @@ export const showOneCountry = (data, common) => {
     });
 };
 
-export const showFiveCountries =()=>{
+export const showSixCountries =()=>{
     main.innerHTML =""
-    let countrys = ["Israel","United States","France","United Kingdom","Thailand"]
+    let countrys = ["India","Israel","United States","United Kingdom","Thailand","France"]
     let arrData = data.filter(item => countrys.includes(item.name.common))
     arrData.forEach(element => {
         let state = createStateInstance(element);
