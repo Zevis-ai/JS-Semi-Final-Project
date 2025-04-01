@@ -21,7 +21,7 @@ export const declarEvent =(_data)=>{
     });
 
     // sidebar
-    document.getElementById("icon_borger").addEventListener("click", ()=> {
+    document.getElementById("icon_burger").addEventListener("click", ()=> {
         document.getElementById("sidebar").classList.add("active");
     });
     
@@ -34,6 +34,7 @@ export const declarEvent =(_data)=>{
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const countryName = e.target.getAttribute('data-country');
+            document.getElementById("sidebar").classList.remove("active");
             if (countryName === 'all') {
                 showAllCountries(_data);
                 return;
