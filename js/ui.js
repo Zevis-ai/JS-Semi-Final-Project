@@ -65,14 +65,45 @@ export const showNoResultsMessage = () => {
     `;
 };
 
-const findCountryByCIOC =(_cioc)=>{
-    let country = data.find(item => item.cca3 === _cioc)
-    showOneCountry(data, country.name.common)
+const findCountryByCIOC = (_cioc) => {
+  let country = data.find(item => item.cioc === _cioc);
+  if (country) {
+    showOneCountry(data, country.name.common);
+  } else {
+    console.warn(`not found a country with the cioc=${_cioc}`);
+  }
 }
 
-export const getCountryNameByCIOC =(_cioc)=>{
-    let country = data.find(item => item.cca3 === _cioc)
-    return country.name.common
+
+
+export const getCountryNameByCIOC = (_cioc) => {
+  let country = data.find(item => item.cioc === _cioc);
+  return country ? country.name.common : "Unknown";
 }
 
-export { updateUi, findCountryByCIOC };
+
+const showErrorMessage = (message) => {
+  const container = document.querySelector("#errorMessage");
+  if (!container) {
+    console.warn("Error container not found");
+    return;
+  }
+
+  const errorEl = document.createElement("div");
+  errorEl.textContent = message;
+  errorEl.style.cssText = `
+    background-color: #ffe0e0;
+    color: #900;
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 400px;
+    font-family: Arial, sans-serif;
+  `;
+
+  container.prepend(errorEl);
+};
+
+
+export { updateUi, findCountryByCIOC , showErrorMessage};
